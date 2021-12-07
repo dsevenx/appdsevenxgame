@@ -21,7 +21,7 @@ export class Main extends Component {
     return (
       <div className="page-container">
         <div className="content-wrap">
-          <Container>Steffen hier</Container>
+          <Container>Steffen hier 2</Container>
         </div>
         <Footer />
       </div>
