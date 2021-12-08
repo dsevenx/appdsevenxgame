@@ -8,6 +8,7 @@ import { Footer } from "./components/cp_tech/Footer";
 // eigene tech Komponenten
 import { PlanentenspielDatenschutz } from "./components/cp_planetenspiel_datenschutz/PlanetenspielDatenschutz";
 import { BuchstabenspielDatenschutz } from "./components/cp_buchstabenspiel_datenschutz/BuchstabenspielDatenschutz";
+import { Home } from "./components/cp_tech/Home";
 
 export class Main extends Component {
   constructor(props) {
@@ -21,34 +22,24 @@ export class Main extends Component {
     return (
       <div className="page-container">
         <div className="content-wrap">
-          <Container>Steffen hier 3</Container>
+          <Container>
+            <Router>
+              <Routes>
+                <Route
+                  path="/buchstabenspieldatenschutz"
+                  element={<BuchstabenspielDatenschutz />}
+                />
+                <Route
+                  path="/planentenspieldatenschutz"
+                  element={<PlanentenspielDatenschutz />}
+                />
+                <Route path="/" element={<Home />} />
+              </Routes>
+            </Router>
+          </Container>
         </div>
         <Footer />
       </div>
     );
   }
 }
-
-/*
-<div className="page-container">
-        <div className="content-wrap">
-          <Container>Steffen hier</Container>
-        </div>
-        <Footer />
-      </div>
-
- <Router>
-              <Routes>
-                <Route
-                  exact
-                  path="/buchstabenspieldatenschutz"
-                  component={() => <BuchstabenspielDatenschutz />}
-                />
-                <Route
-                  exact
-                  path="/planentenspieldatenschutz"
-                  component={() => <PlanentenspielDatenschutz />}
-                />
-              </Routes>
-            </Router>
-            */
