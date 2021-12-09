@@ -3,12 +3,12 @@ import { Container } from "react-bootstrap";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Footer } from "./components/cp_tech/Footer";
 
 // eigene tech Komponenten
-import { PlanentenspielDatenschutz } from "./components/cp_planetenspiel_datenschutz/PlanetenspielDatenschutz";
-import { BuchstabenspielDatenschutz } from "./components/cp_buchstabenspiel_datenschutz/BuchstabenspielDatenschutz";
+import { Datenschutz } from "./components/Datenschutz";
 import { Home } from "./components/cp_tech/Home";
+import { Impressum } from "./components/Impressum";
+import { Footer } from "./components/cp_tech/Footer";
 
 export class Main extends Component {
   constructor(props) {
@@ -26,19 +26,24 @@ export class Main extends Component {
             <Router>
               <Routes>
                 <Route
-                  path="/buchstabenspieldatenschutz"
-                  element={<BuchstabenspielDatenschutz />}
+                  path="/planentenspieldatenschutz"
+                  element={<Datenschutz app_name="'PlanetenspielUndApp2b'" />}
                 />
                 <Route
-                  path="/planentenspieldatenschutz"
-                  element={<PlanentenspielDatenschutz />}
+                  path="/buchstabenspieldatenschutz"
+                  element={<Datenschutz app_name="'buchstaben lernen app'" />}
                 />
+                <Route
+                  path="/kirisorganizer"
+                  element={<Datenschutz app_name="'KirisOrganizer'" />}
+                />
+                <Route path="/impressum" element={<Impressum />} />
                 <Route path="/" element={<Home />} />
               </Routes>
             </Router>
           </Container>
         </div>
-        <Footer />
+        <Footer css_chen="main-footer-all" />
       </div>
     );
   }

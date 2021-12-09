@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import { Container, Card, Row, Col } from "react-bootstrap";
-import "../datenschutz.css";
+import "./datenschutz.css";
 
-export class BuchstabenspielDatenschutz extends Component {
+export class Datenschutz extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      KommtNochWas: [],
+    };
+  }
   render() {
-    const lBez = "Buchstaben-App";
+    const lBez = this.props.app_name;
 
     return (
       <div className="mt-5 d-flex justify-content-middle">
@@ -28,8 +34,8 @@ export class BuchstabenspielDatenschutz extends Component {
                       <div class="hoehe">
                         Die folgenden Hinweise geben einen einfachen Überblick
                         darüber, was mit Ihren personenbezogenen Daten passiert,
-                        wenn Sie unsere Website besuchen. Personenbezogene Daten
-                        sind alle Daten, mit denen Sie persönlich identifiziert
+                        wenn Sie unsere App nutzen. Personenbezogene Daten sind
+                        alle Daten, mit denen Sie persönlich identifiziert
                         werden können. Ausführliche Informationen zum Thema
                         Datenschutz entnehmen Sie unserer unter diesem Text
                         aufgeführten Datenschutzerklärung.
@@ -46,35 +52,23 @@ export class BuchstabenspielDatenschutz extends Component {
               <Card>
                 <Card.Body>
                   <Card.Title>
-                    <h3>Datenerfassung auf unserer Website</h3>
+                    <h3>Datenerfassung bei {lBez}</h3>
                   </Card.Title>
 
                   <Card.Text className="mb-3">
-                    <p>
-                      <div class="hoehe">
-                        Wer ist verantwortlich für die Datenerfassung auf dieser
-                        Website?
-                      </div>
-                      <div class="hoehekl">
-                        <br />
-                        Die Datenverarbeitung auf dieser Website erfolgt durch
-                        den Websitebetreiber. Dessen Kontaktdaten können Sie dem
-                        Impressum dieser Website entnehmen.
-                      </div>
-                    </p>
-
                     <p>
                       <div class="hoehe">Wie erfassen wir Ihre Daten?</div>
                       <div class="hoehekl">
                         <br />
                         Ihre Daten werden zum einen dadurch erhoben, dass Sie
                         uns diese mitteilen. Hierbei kann es sich z.B. um Daten
-                        handeln, die Sie in ein Kontaktformular eingeben. Andere
-                        Daten werden automatisch beim Besuch der Website durch
-                        unsere IT-Systeme erfasst. Das sind vor allem technische
-                        Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit
-                        des Seitenaufrufs). Die Erfassung dieser Daten erfolgt
-                        automatisch, sobald Sie unsere Website betreten.
+                        handeln, die Sie in ein Kontaktformular / Namesfeld
+                        eingeben. Andere Daten werden automatisch bei der
+                        App-Nutzung durch unsere IT-Systeme / Gerätehersteller
+                        erfasst. Das sind vor allem technische Daten (z.B.
+                        Betriebssystem oder Uhrzeit des Seitenaufrufs). Die
+                        Erfassung dieser Daten erfolgt automatisch, sobald Sie
+                        unsere App nutzen.
                       </div>
                     </p>
 
@@ -83,9 +77,9 @@ export class BuchstabenspielDatenschutz extends Component {
                       <div class="hoehekl">
                         <br />
                         Ein Teil der Daten wird erhoben, um eine fehlerfreie
-                        Bereitstellung der Website zu gewährleisten. Andere
-                        Daten können zur Analyse Ihres Nutzerverhaltens
-                        verwendet werden.
+                        Bereitstellung der App zu gewährleisten. Andere Daten
+                        können zur Analyse Ihres Nutzerverhaltens verwendet
+                        werden.
                       </div>
                     </p>
 
@@ -125,23 +119,21 @@ export class BuchstabenspielDatenschutz extends Component {
                       <div class="hoehe">
                         Sie haben jederzeit das Recht unentgeltlich Auskunft
                         über Herkunft, Empfänger und Zweck Ihrer gespeicherten
-                        personenbezogenen Daten zu erhalten. Sie Beim Besuch
-                        unserer Website kann Ihr Surf-Verhalten statistisch
-                        ausgewertet werden. Das geschieht vor allem mit Cookies
-                        und mit sogenannten Analyseprogrammen. Die Analyse Ihres
-                        Surf-Verhaltens erfolgt in der Regel anonym; das
-                        Surf-Verhalten kann nicht zu Ihnen zurückverfolgt
-                        werden. Sie können dieser Analyse widersprechen oder sie
-                        durch die Nichtbenutzung bestimmter Tools verhindern.
-                        Detaillierte Informationen dazu finden Sie in der
-                        folgenden Datenschutzerklärung.haben außerdem ein Recht,
-                        die Berichtigung, Sperrung oder Löschung dieser Daten zu
-                        verlangen. Hierzu sowie zu weiteren Fragen zum Thema
-                        Datenschutz können Sie sich jederzeit unter der im
-                        Impressum angegebenen Adresse an uns wenden. Des
-                        Weiteren steht Ihnen ein Beschwerderecht bei der
-                        zuständigen Aufsichtsbehörde zu. Sie können dieser
-                        Analyse widersprechen. Über die
+                        personenbezogenen Daten zu erhalten. Beim Besuch unserer
+                        APP kann Ihr Nutzungensverhalten statistisch ausgewertet
+                        werden. Die Analyse Ihres Nutzungserhaltens erfolgt in
+                        der Regel anonym; das Nutzungserhaltens kann nicht zu
+                        Ihnen zurückverfolgt werden. Sie können dieser Analyse
+                        widersprechen oder sie durch die Nichtbenutzung
+                        bestimmter Tools verhindern. Detaillierte Informationen
+                        dazu finden Sie in der folgenden Datenschutzerklärung.
+                        Sie haben außerdem ein Recht, die Berichtigung, Sperrung
+                        oder Löschung dieser Daten zu verlangen. Hierzu sowie zu
+                        weiteren Fragen zum Thema Datenschutz können Sie sich
+                        jederzeit unter der im Impressum angegebenen Adresse an
+                        uns wenden. Des Weiteren steht Ihnen ein Beschwerderecht
+                        bei der zuständigen Aufsichtsbehörde zu. Sie können
+                        dieser Analyse widersprechen. Über die
                         Widerspruchsmöglichkeiten werden wir Sie in dieser
                         Datenschutzerklärung informieren.
                       </div>
@@ -163,12 +155,12 @@ export class BuchstabenspielDatenschutz extends Component {
                   <Card.Text className="mb-3">
                     <p>
                       <div class="hoehe">
-                        Die Betreiber dieser Seiten nehmen den Schutz Ihrer
+                        Die Betreiber von {lBez} nehmen den Schutz Ihrer
                         persönlichen Daten sehr ernst. Wir behandeln Ihre
                         personenbezogenen Daten vertraulich und entsprechend der
                         gesetzlichen Datenschutzvorschriften sowie dieser
-                        Datenschutzerklärung. Wenn Sie diese Website benutzen,
-                        werden verschiedene personenbezogene Daten erhoben.
+                        Datenschutzerklärung. Wenn Sie diese App benutzen,
+                        werden ggf. verschiedene personenbezogene Daten erhoben.
                         Personenbezogene Daten sind Daten, mit denen Sie
                         persönlich identifiziert werden können. Die vorliegende
                         Datenschutzerklärung erläutert, welche Daten wir erheben
@@ -197,24 +189,23 @@ export class BuchstabenspielDatenschutz extends Component {
                   <Card.Text className="mb-3">
                     <p>
                       <div class="hoehe">
-                        Die verantwortliche Stelle für die Datenverarbeitung auf
-                        dieser Website ist:
+                        Die verantwortliche Stelle für die Datenverarbeitung
+                        bzgl {lBez} ist:
                       </div>
                       <br />
                       <div class="hoehe">
-                        {lBez} Management GmbH
+                        {lBez} z.H. Rokosch
                         <br />
-                        Handwerkerhof 13
+                        Hörselbergstrasse 4a
                         <br />
-                        07548 Gera
+                        81677 München
                       </div>
                       <br />
                       <div class="hoehe">
-                        Geschäftsführer: Christian Rokosch
                         <br />
-                        Telefon: 0365 / 83 200 513
+                        Email
                         <br />
-                        E-Mail: kontakt@rokosch-immo.de
+                        steffen.rokosch.app@gmail.com
                       </div>
                       <br />
                       <div class="hoehe">
@@ -326,17 +317,17 @@ export class BuchstabenspielDatenschutz extends Component {
                   <Card.Text className="mb-3">
                     <p>
                       <div class="hoehe">
-                        Diese Seite nutzt aus Sicherheitsgründen und zum Schutz
-                        der Übertragung vertraulicher Inhalte, wie zum Beispiel
-                        Bestellungen oder Anfragen, die Sie an uns als
-                        Seitenbetreiber senden, eine SSL-bzw.
-                        TLS-Verschlüsselung. Eine verschlüsselte Verbindung
-                        erkennen Sie daran, dass die Adresszeile des Browsers
-                        von “http://” auf “https://” wechselt und an dem
-                        Schloss-Symbol in Ihrer Browserzeile. Wenn die SSL- bzw.
-                        TLS-Verschlüsselung aktiviert ist, können die Daten, die
-                        Sie an uns übermitteln, nicht von Dritten mitgelesen
-                        werden.
+                        Die APP {lBez} nutzt aus Sicherheitsgründen und zum
+                        Schutz der Übertragung vertraulicher Inhalte, wie zum
+                        Beispiel Bestellungen oder Anfragen, die Sie an uns als
+                        APP-Betreiber senden, eine SSL-bzw. TLS-Verschlüsselung.
+                        Eine verschlüsselte Verbindung erkennen Sie daran, dass
+                        die Adresszeile des Browsers von “http://” auf
+                        “https://” wechselt und an dem Schloss-Symbol in Ihrer
+                        Browserzeile. Wenn die SSL- bzw. TLS-Verschlüsselung
+                        aktiviert ist, können die Daten, die Sie an uns
+                        übermitteln, nicht von Dritten mitgelesen werden. In der
+                        APP ist diese sichere Übertragung i.d.R. nicht sichtbar.
                       </div>
                       <br />
                     </p>
@@ -351,13 +342,13 @@ export class BuchstabenspielDatenschutz extends Component {
               <Card>
                 <Card.Body>
                   <Card.Title>
-                    <h4> Datenerfassung auf unserer Website : Cookies</h4>
+                    <h4> Datenerfassung auf unserer APP : Cookies</h4>
                   </Card.Title>
 
                   <Card.Text className="mb-3">
                     <p>
                       <div class="hoehe">
-                        Die Internetseiten verwenden teilweise so genannte
+                        Die Internetseiten/APP verwenden teilweise so genannte
                         Cookies. Cookies richten auf Ihrem Rechner keinen
                         Schaden an und enthalten keine Viren. Cookies dienen
                         dazu, unser Angebot nutzerfreundlicher, effektiver und
@@ -420,7 +411,7 @@ export class BuchstabenspielDatenschutz extends Component {
                         <p>
                           Der Provider der Seiten erhebt und speichert
                           automatisch Informationen in so genannten
-                          Server-Log-Dateien, die Ihr Browser automatisch an uns
+                          Server-Log-Dateien, die Ihr mobiles Gerät automatisch
                           übermittelt. Dies sind:
                         </p>
                         <p>
@@ -430,6 +421,7 @@ export class BuchstabenspielDatenschutz extends Component {
                           <li>Hostname des zugreifenden Rechners</li>
                           <li>Uhrzeit der Serveranfrage</li>
                           <li>IP-Adresse</li>
+                          <li>MAC-Adresse</li>
                         </p>
                       </div>
                       <br />
@@ -458,88 +450,30 @@ export class BuchstabenspielDatenschutz extends Component {
               <Card>
                 <Card.Body>
                   <Card.Title>
-                    <h4>Analyse Tools und Werbung</h4>
+                    <h4>Datenübermittlung in die USA</h4>
                   </Card.Title>
 
                   <Card.Text className="mb-3">
                     <p>
-                      <div class="hoehe">Google Analytics</div>
+                      <div class="hoehe">Datenübermittlung in die USA</div>
                       <br />
                       <div class="hoehekl">
-                        Diese Website nutzt Funktionen des Webanalysedienstes
-                        Google Analytics. Anbieter ist die Google Inc., 1600
-                        Amphitheatre Parkway, Mountain View, CA 94043, USA.
-                        Google Analytics verwendet so genannte "Cookies". Das
-                        sind Textdateien, die auf Ihrem Computer gespeichert
-                        werden und die eine Analyse der Benutzung der Website
-                        durch Sie ermöglichen. Die durch den Cookie erzeugten
-                        Informationen über Ihre Benutzung dieser Website werden
-                        in der Regel an einen Server von Google in den USA
-                        übertragen und dort gespeichert. Die Speicherung von
-                        Google-Analytics-Cookies erfolgt auf Grundlage von Art.
-                        6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein
-                        berechtigtes Interesse an der Analyse des
-                        Nutzerverhaltens, um sowohl sein Webangebot als auch
-                        seine Werbung zu optimieren.
-                      </div>
-                    </p>
-                    <p>
-                      <div class="hoehe">IP Anonymisierung</div>
-                      <br />
-                      <div class="hoehekl">
-                        Wir haben auf dieser Website die Funktion
-                        IP-Anonymisierung ggf. aktiviert. Dadurch wird Ihre
-                        IP-Adresse von Google innerhalb von Mitgliedstaaten der
-                        Europäischen Union oder in anderen Vertragsstaaten des
-                        Abkommens über den Europäischen Wirtschaftsraum vor der
-                        Übermittlung in die USA gekürzt. Nur in Ausnahmefällen
-                        wird die volle IP-Adresse an einen Server von Google in
-                        den USA übertragen und dort gekürzt. Im Auftrag des
-                        Betreibers dieser Website wird Google diese
-                        Informationen benutzen, um Ihre Nutzung der Website
-                        auszuwerten, um Reports über die Websiteaktivitäten
-                        zusammenzustellen und um weitere mit der Websitenutzung
-                        und der Internetnutzung verbundene Dienstleistungen
-                        gegenüber dem Websitebetreiber zu erbringen. Die im
-                        Rahmen von Google Analytics von Ihrem Browser
-                        übermittelte IP-Adresse wird nicht mit anderen Daten von
-                        Google zusammengeführt.
-                      </div>
-                    </p>
-
-                    <p>
-                      <div class="hoehe">Browser Plugin</div>
-                      <br />
-                      <div class="hoehekl">
-                        Sie können die Speicherung der Cookies durch eine
-                        entsprechende Einstellung Ihrer Browser-Software
-                        verhindern; wir weisen Sie jedoch darauf hin, dass Sie
-                        in diesem Fall gegebenenfalls nicht sämtliche Funktionen
-                        dieser Website vollumfänglich werden nutzen können. Sie
-                        können darüber hinaus die Erfassung der durch den Cookie
-                        erzeugten und auf Ihre Nutzung der Website bezogenen
-                        Daten (inkl. Ihrer IP-Adresse) an Google sowie die
-                        Verarbeitung dieser Daten durch Google verhindern, indem
-                        Sie das unter dem folgenden Link verfügbare
-                        Browser-Plugin herunterladen und installieren:
-                        <Card.Link href="https://tools.google.com/dlpage/gaoptout?hl=de">
-                          {" "}
-                          https://tools.google.com/dlpage/gaoptout?hl=de{" "}
-                        </Card.Link>
-                      </div>
-                    </p>
-
-                    <p>
-                      <div class="hoehe">Widerspruch gegen Datenerfassung</div>
-                      <br />
-                      <div class="hoehekl">
-                        Sie können die Erfassung Ihrer Daten durch Google
-                        Analytics verhindern, indem Sie auf folgenden Link
-                        klicken und den Anweisungen folgen :
-                        <Card.Link href="https://tools.google.com/dlpage/gaoptout?hl=de">
-                          {" "}
-                          Google Analytics deaktivieren{" "}
-                        </Card.Link>
+                        Durch den Einsatz von Tools von Anbietern mit Sitz in
+                        den USA werden auch Daten an den Anbieter in die USA
+                        übermittelt, auch dann, wenn Vertrag über den Einsatz
+                        des Tools mit einem Tochterunternehmen des Anbieters
+                        zustande kommt, dessen Sitz innerhalb der Europäischen
+                        Union (z. B. Irland) liegt. Rechtsgrundlage für die
+                        Datenübermittlung durch den Einsatz des Tools ist
+                        jeweils eine auf den Einzelfall bezogenen Einwilligung
+                        nach Art. 49 Abs. 1 Buchst. a) DSGVO. In dem
+                        Zusammenhang wird darauf hingewiesen, dass für die USA
+                        kein Angemessenheitsbeschluss der EU-Kommission
+                        existiert. Es besteht insoweit ein Risiko für den
+                        Betroffenen, dass staatliche Stellen in den USA auf die
+                        übermittelten Daten ohne konkreten Anlass Zugriff
+                        nehmen, ohne dass eine Möglichkeit gewährleistet ist,
+                        hiergegen effektiven Rechtsschutz zu suchen.
                       </div>
                     </p>
                   </Card.Text>
@@ -553,25 +487,36 @@ export class BuchstabenspielDatenschutz extends Component {
               <Card>
                 <Card.Body>
                   <Card.Title>
-                    <h4>Aktive Komponenten</h4>
+                    <h4>Datenlöschenung</h4>
                   </Card.Title>
 
                   <Card.Text className="mb-3">
                     <p>
                       <div class="hoehe">
-                        Auf dieser Webseite werden aktive Komponenten, wie
-                        JavaScript / jQuery verwendet. Diese Funktionen können
-                        in den Browser-Einstellungen Ihres Internetbrowsers
-                        deaktiviert werden. Die Webseite ist dann allerdings
-                        nicht mehr nutzbar.
+                        Routinemäßige Löschung und Sperrung von
+                        personenbezogenen Daten
                       </div>
                       <br />
+                      <div class="hoehekl">
+                        Personenbezogene Daten werden nur für den Zeitraum
+                        gespeichert, solange dies für den jeweiligen Zweck der
+                        Verarbeitung oder aufgrund von gesetzlichen Vorgaben
+                        erforderlich ist. Nach Zweckerreichung oder Ablauf der
+                        gesetzlich vorgeschriebenen Aufbewahrungsfrist werden
+                        die personenbezogenen Daten routinemäßig und
+                        entsprechend den gesetzlichen Vorschriften gelöscht.
+                        Soweit der jeweils vorgesehene Zweck der Verarbeitung
+                        erreicht ist, die Daten aufgrund von gesetzlichen
+                        Vorgaben aber noch nicht gelöscht werden dürfen, werden
+                        die Daten gesperrt.
+                      </div>
                     </p>
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
           </Row>
+          <Row className="mr-3 mb-3"></Row>
         </Container>
       </div>
     );
