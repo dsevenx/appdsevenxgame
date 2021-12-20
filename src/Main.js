@@ -17,7 +17,7 @@ export class Main extends Component {
       kommtnoch_imstate: "",
     };
   }
-  // jetzt render2
+  // jetzt render3
   render() {
     return (
       <div className="page-container">
