@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // eigene tech Komponenten
 import { Datenschutz } from "./components/Datenschutz";
@@ -18,22 +18,29 @@ export default class App extends Component {
         <div className="content-wrap">
           <Container>
             <Router>
-              <Routes>
+              <Switch>
                 <Route
                   path="/planentenspieldatenschutz"
-                  element={<Datenschutz app_name="'PlanetenspielUndApp2b'" />}
+                  exact
+                  component={() => (
+                    <Datenschutz app_name="'PlanetenspielUndApp2b'" />
+                  )}
                 />
                 <Route
                   path="/buchstabenspieldatenschutz"
-                  element={<Datenschutz app_name="'buchstaben lernen app'" />}
+                  exact
+                  component={() => (
+                    <Datenschutz app_name="'buchstaben lernen app'" />
+                  )}
                 />
                 <Route
                   path="/kirisorganizer"
-                  element={<Datenschutz app_name="'KirisOrganizer'" />}
+                  exact
+                  component={() => <Datenschutz app_name="'KirisOrganizer'" />}
                 />
-                <Route path="/impressum" element={<Impressum />} />
-                <Route path="/" element={<Home />} />
-              </Routes>
+                <Route path="/impressum" component={() => <Impressum />} />
+                <Route path="/" component={() => <Home />} />
+              </Switch>
             </Router>
           </Container>
         </div>
