@@ -516,7 +516,19 @@ export class Datenschutz extends Component {
               </Card>
             </Col>
           </Row>
-          <Row className="mr-3 mb-3"></Row>
+          <Row className="mr-3 mb-3">
+            <Col md={{ offset: 10 }}>
+              <p>
+                {" "}
+                <Card.Link href="./"> zurück zum Einstieg </Card.Link>{" "}
+              </p>
+            </Col>
+          </Row>
+          <Row className="mr-3 mb-3">
+            <Col>
+              <p> </p>
+            </Col>
+          </Row>
         </Container>
       </div>
     );
