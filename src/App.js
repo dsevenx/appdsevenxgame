@@ -38,6 +38,13 @@ export default class App extends Component {
                   exact
                   component={() => <Datenschutz app_name="'KirisOrganizer'" />}
                 />
+                <Route
+                  path="/symbolspieldatenschutz"
+                  exact
+                  component={() => (
+                    <Datenschutz app_name="'Symbolspiel LG6B'" />
+                  )}
+                />
                 <Route path="/impressum" component={() => <Impressum />} />
                 <Route path="/" component={() => <Home />} />
               </Switch>

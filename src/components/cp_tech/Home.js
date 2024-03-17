@@ -3,6 +3,7 @@ import { Row, Col, Container, Image, Card } from "react-bootstrap";
 import IMG_BUCHSTABEN from "../../assets/Burcu_Icon_1024.png";
 import IMG_PLANETENSPIEL from "../../assets/LaunchScreen-iPhoneLandscape.png";
 import IMG_KIRIS_ORGANIZER from "../../assets/Kiris_180_180.png";
+import IMG_SYMBOLSPIEL from "../../assets/KrissKross.png";
 
 export class Home extends Component {
   render() {
@@ -30,7 +31,6 @@ export class Home extends Component {
         </Container>
         <Container>
           <Row>
-            <Col xs={1}></Col>
             <Col xs={3}>
               <div>
                 <table className="mt-5 d-flex justify-content-middle">
@@ -67,7 +67,42 @@ export class Home extends Component {
                 </table>
               </div>
             </Col>
+            <Col xs={3}>
+              <div>
+                <table className="mt-5 d-flex justify-content-middle">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <Card>
+                          <Image
+                            src={IMG_SYMBOLSPIEL}
+                            alt="es fehlt IMG_SYMBOLSPIEL"
+                            fluid
+                            className="card-img-top"
+                          />
+                          <Card.Body>
+                            <Card.Title>
+                              <h3>Symbolspiel LG6B</h3>
+                            </Card.Title>
 
+                            <Card.Text className="mb-3">
+                              <p>
+                                Hier geht es zur Datenschutzerklärung vom
+                                <Card.Link href="./symbolspieldatenschutz">
+                                  {" "}
+                                  Symbolspiel LG6B{" "}
+                                </Card.Link>{" "}
+                                .
+                              </p>
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </Col>
             <Col xs={3}>
               <div>
                 <table className="mt-5 d-flex justify-content-middle">
