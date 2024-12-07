@@ -4,7 +4,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-// eigene tech Komponenten
+// eigene tech Komponenten Version 2
 import { Datenschutz } from "./components/Datenschutz";
 import { Home } from "./components/cp_tech/Home";
 import { Impressum } from "./components/Impressum";
