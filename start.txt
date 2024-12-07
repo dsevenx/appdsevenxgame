@@ -1,0 +1,9 @@
+yarn --verson check
+
+sudo yarn install 
+
+sudo yarn upgrade react@latest
+
+sudo yarn add react-bootstrap bootstrap
+
+yarn run start

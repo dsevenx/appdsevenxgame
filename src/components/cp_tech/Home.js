@@ -4,6 +4,8 @@ import IMG_BUCHSTABEN from "../../assets/Burcu_Icon_1024.png";
 import IMG_PLANETENSPIEL from "../../assets/LaunchScreen-iPhoneLandscape.png";
 import IMG_KIRIS_ORGANIZER from "../../assets/Kiris_180_180.png";
 import IMG_SYMBOLSPIEL from "../../assets/KrissKross.png";
+import IMG_NITZBUCH_17_12 from "../../assets/Notizbuch_App_17_12_24.png";
+
 
 export class Home extends Component {
   render() {
@@ -21,6 +23,9 @@ export class Home extends Component {
                         <h4>
                           <p>Willkommen bei DsevenX APPs</p>
                         </h4>
+                        <h5>
+                          <p></p>
+                        </h5>
                       </td>
                     </tr>
                   </tbody>
@@ -164,6 +169,45 @@ export class Home extends Component {
                                 <Card.Link href="./buchstabenspieldatenschutz">
                                   {" "}
                                   buchstaben lernen app{" "}
+                                </Card.Link>{" "}
+                                .
+                              </p>
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col xs={3}>
+              <div>
+                <table className="mt-5 d-flex justify-content-middle">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <Card>
+                          <Image
+                            src={IMG_NITZBUCH_17_12}
+                            alt="es fehlt IMG_NITZBUCH_17_12"
+                            fluid
+                            className="card-img-top"
+                          />
+                          <Card.Body>
+                            <Card.Title>
+                              <h3>Notizbuch 17.12.</h3>
+                            </Card.Title>
+
+                            <Card.Text className="mb-3">
+                              <p>
+                                Hier geht es zur Datenschutzerklärung vom
+                                <Card.Link href="./Notizbuch1712datenschutz">
+                                  {" "}
+                                  Notizbuch_17_12 app{" "}
                                 </Card.Link>{" "}
                                 .
                               </p>
