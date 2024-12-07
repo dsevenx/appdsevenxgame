@@ -6,8 +6,7 @@ export class Footer extends Component {
   render() {
     const lJahr = new Date().getFullYear();
     return (
-      <div class={this.props.css_chen}>
-        <div class="main-footer">
+        <div class="main-footer main-footer-all ">
           <Container>
             <Row>
               <p />
@@ -21,7 +20,7 @@ export class Footer extends Component {
             <Row></Row>
           </Container>
         </div>
-      </div>
+    
     );
   }
 }
