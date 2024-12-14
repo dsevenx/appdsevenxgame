@@ -21,7 +21,7 @@ export class Home extends Component {
                     <tr>
                       <td>
                         <h4>
-                          <p>Willkommen bei DsevenX APPs</p>
+                          <p>Willkommen bei DsevenX APPs - 2024</p>
                         </h4>
                         <h5>
                           <p></p>
