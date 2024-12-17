@@ -32,7 +32,7 @@ export class Datenschutz extends Component {
                   <Card.Text className="mb-3">
                     <p>
                       <div class="hoehe">
-                        Die folgenden Hinweise geben einen einfachen Überblick
+                        Die folgenden Hinweise kamen von Hr. Nassl geben einen einfachen Überblick
                         darüber, was mit Ihren personenbezogenen Daten passiert,
                         wenn Sie unsere App nutzen. Personenbezogene Daten sind
                         alle Daten, mit denen Sie persönlich identifiziert
